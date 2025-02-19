@@ -1,0 +1,63 @@
+const eqArrays = function (arr1, arr2) {
+  if (!Array.isArray(arr1) || !Array.isArray(arr2)) {
+    return false;
+  }
+
+  if (arr1.length !== arr2.length) {
+    return false;
+  }
+
+  for (let i = 0; i < arr1.length; i++) {
+    if (arr1[i] !== arr2[i]) {
+      return false;
+    }
+  }
+
+  return true;
+};
+
+const assertArraysEqual = function (arr1, arr2) {
+  if (!Array.isArray(arr1) || !Array.isArray(arr2)) {
+    console.log("Give me 2 arrays😡");
+  }
+
+  if (!eqArrays(arr1, arr2)) {
+    console.log(`🔴🔴🔴 Assertion Failed: ${arr1} !== ${arr2}`);
+  } else {
+    console.log(`✅✅✅ Assertion Passed: ${arr1} === ${arr2}`);
+  }
+};
+
+// step1: input and output
+// input 2 arrays(source, itemsToRemove), output array(newArray)
+
+// step2: figure the behavior depending on data
+// source and itemsToRemove aren'r arrays -> 'Give me 2 arrays 😡'
+
+// step3: figure out between input and output
+// function without
+//  define newArray
+//  iterate source
+//    iterate itemsToRemove
+//      if source[i] equal itemsToRemove[j], newArray.slice(source[i])
+//  return newArray;
+
+const without = function (source, itemsToRemove) {
+  if (!Array.isArray(source) || !Array.isArray(itemsToRemove)) {
+    return "Give me 2 arrays 😡";
+  }
+
+  let newArray = [];
+  for (let i = 0; i < source.length; i++) {
+    for (let j = 0; j < itemsToRemove.length; j++) {
+      if (source[i] === itemsToRemove[j]) {
+        if (source[i] === itemsToRemove[j]) {
+          newArray = source.slice(i + 1);
+        }
+      }
+    }
+  }
+  console.log(newArray);
+};
+
+without([1, 2, 3], [1]);
