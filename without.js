@@ -43,10 +43,6 @@ const assertArraysEqual = function (arr1, arr2) {
 //  return newArray;
 
 const without = function (source, itemsToRemove) {
-  if (!Array.isArray(source) || !Array.isArray(itemsToRemove)) {
-    return "Give me 2 arrays 😡";
-  }
-
   let newArray = [];
   for (let i = 0; i < source.length; i++) {
     let shouldRemove = false;
