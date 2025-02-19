@@ -58,8 +58,7 @@ const middle = function (array) {
   if (array.length % 2 !== 0) {
     result.push(array[index]);
     return result;
-  }
-  if (array.length % 2 === 0) {
+  } else {
     result.push(array[index - 1]);
     result.push(array[index]);
     return result;
@@ -80,5 +79,5 @@ console.log("even:", middle([1, 2, 3, 4, 5, 6]));
 console.log("odd:", middle(["light", "house", "lab"]));
 console.log("even:", middle(["hello", "world", "this", "is"]));
 
-assertArraysEqual(middle([1, 2, 3]), [1, 2, 3]);
+assertArraysEqual(middle([1, 2, 3]), [2]);
 assertArraysEqual(middle([1, 2, 3, 4]), [2, 3]);
