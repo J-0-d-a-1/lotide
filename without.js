@@ -50,14 +50,12 @@ const without = function (source, itemsToRemove) {
   let newArray = [];
   for (let i = 0; i < source.length; i++) {
     for (let j = 0; j < itemsToRemove.length; j++) {
-      if (source[i] === itemsToRemove[j]) {
-        if (source[i] === itemsToRemove[j]) {
-          newArray = source.slice(i + 1);
-        }
+      if (source[i] !== itemsToRemove[j]) {
+        newArray.push(source[i]);
       }
     }
   }
-  console.log(newArray);
+  return newArray;
 };
 
-without([1, 2, 3], [1]);
+console.log(without([1, 2, 3], [1]));
