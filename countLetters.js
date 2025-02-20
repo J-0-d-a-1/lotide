@@ -23,13 +23,14 @@ const assertEqual = function (actual, expected) {
 const countLetters = function (sentence) {
   const results = {};
 
-  const spaceRemovedSentence = sentence.replaceAll(" ", "");
-
-  for (const item of spaceRemovedSentence) {
-    if (results[item]) {
-      results[item] += 1;
-    } else {
-      results[item] = 1;
+  for (const item of sentence) {
+    if (item !== " ") {
+      console.log(item);
+      if (results[item]) {
+        results[item] += 1;
+      } else {
+        results[item] = 1;
+      }
     }
   }
 
