@@ -12,16 +12,13 @@ const assertEqual = function (actual, expected) {
 // itereate
 
 const findKey = (object, callback) => {
-  let resultKey;
-
   for (const key of Object.keys(object)) {
     const value = object[key];
     if (callback(value)) {
-      resultKey = key;
-      return resultKey;
+      return key;
     }
   }
-  return;
+  return undefined;
 };
 
 assertEqual(
