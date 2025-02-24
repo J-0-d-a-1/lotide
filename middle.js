@@ -1,33 +1,3 @@
-const eqArrays = function (arr1, arr2) {
-  if (!Array.isArray(arr1) || !Array.isArray(arr2)) {
-    return false;
-  }
-
-  if (arr1.length !== arr2.length) {
-    return false;
-  }
-
-  for (let i = 0; i < arr1.length; i++) {
-    if (arr1[i] !== arr2[i]) {
-      return false;
-    }
-  }
-
-  return true;
-};
-
-const assertArraysEqual = function (arr1, arr2) {
-  if (!Array.isArray(arr1) || !Array.isArray(arr2)) {
-    console.log("Give me 2 arrays😡");
-  }
-
-  if (!eqArrays(arr1, arr2)) {
-    console.log(`🔴🔴🔴 Assertion Failed: ${arr1} !== ${arr2}`);
-  } else {
-    console.log(`✅✅✅ Assertion Passed: ${arr1} === ${arr2}`);
-  }
-};
-
 // step1: input array, output array up to length 2
 
 // step2;
@@ -65,19 +35,18 @@ const middle = function (array) {
   }
 };
 
-console.log("Not array:", middle(1));
+// console.log("Not array:", middle(1));
 
-console.log("less than 3:", middle([1]));
-console.log("less than 3:", middle([(1, 2)]));
+// console.log("less than 3:", middle([1]));
+// console.log("less than 3:", middle([(1, 2)]));
 
-console.log("odd:", middle([1, 2, 3]));
-console.log("odd:", middle([1, 2, 3, 4, 5]));
+// console.log("odd:", middle([1, 2, 3]));
+// console.log("odd:", middle([1, 2, 3, 4, 5]));
 
-console.log("even:", middle([1, 2, 3, 4]));
-console.log("even:", middle([1, 2, 3, 4, 5, 6]));
+// console.log("even:", middle([1, 2, 3, 4]));
+// console.log("even:", middle([1, 2, 3, 4, 5, 6]));
 
-console.log("odd:", middle(["light", "house", "lab"]));
-console.log("even:", middle(["hello", "world", "this", "is"]));
+// console.log("odd:", middle(["light", "house", "lab"]));
+// console.log("even:", middle(["hello", "world", "this", "is"]));
 
-assertArraysEqual(middle([1, 2, 3]), [2]);
-assertArraysEqual(middle([1, 2, 3, 4]), [2, 3]);
+module.exports = middle;
