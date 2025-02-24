@@ -12,3 +12,7 @@ const word = ["Bootcamp"];
 const result2 = tail(word);
 assertEqual(result2.length, 0);
 assertEqual(word.length, 1);
+
+const emptyArr = [];
+const result3 = tail(emptyArr);
+assertEqual(result3.length, 0);

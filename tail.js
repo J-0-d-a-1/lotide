@@ -5,6 +5,11 @@ const tail = function (arr) {
   //     newArr.push(arr[i]);
   //   }
   // }
+
+  // if (arr.length === 0) {
+  //   return arr;
+  // }
+
   let newArr = arr.slice(1);
   return newArr;
 };
