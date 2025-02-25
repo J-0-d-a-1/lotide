@@ -6,14 +6,20 @@ const middle = require("../middle");
 
 describe("@middle", () => {
   it("return [2] for [1, 2, 3]", () => {
-    assert.deepEqual(middle([1, 2, 3]), [2]);
+    const arr = [1, 2, 3];
+    assert.deepEqual(middle(arr), [2]);
+    assert.strictEqual(arr.length, 3);
   });
 
   it("returns [2, 3] for [1, 2, 3, 4]", () => {
-    assert.deepEqual(middle([1, 2, 3, 4]), [2, 3]);
+    const arr = [1, 2, 3, 4];
+    assert.deepEqual(middle(arr), [2, 3]);
+    assert.strictEqual(arr.length, 4);
   });
 
   it("return [] for an empty array", () => {
-    assert.deepEqual(middle([]), []);
+    const arr = [];
+    assert.deepEqual(middle(arr), []);
+    assert.strictEqual(arr.length, 0);
   });
 });
